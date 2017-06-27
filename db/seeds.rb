@@ -12,3 +12,37 @@ c = Page.create!(name: 'О компании', fullpath: '/company', menu_ids: [h
 Page.create!(name: 'Новости', fullpath: '/news', menu_ids: [h])
 Page.create!(name: 'Контакты', fullpath: '/contacts', menu_ids: [h], content: 'Текст стр контакты')
 
+MathObject.destroy_all
+MathMap.destroy_all
+nat =  MathObject.create! name: "Natural", js: '''
+{
+  random: function(){ return Math.random() * 35000;},
+  eq: function(n){ return n == n; },
+}
+'''
+nnext = MathMap.create! name: "NNext", js: '''
+{
+  run: function(n){return n + 1},
+  tmpl: function(n){return "" + n + " \\mapsto " + (n+1);},
+  example: function(){
+    var n = new M.Natural();
+    return M.NNext.tmpl(n);
+  },
+}
+'''
+nnext.objects.push nat
+nnext.save!
+
+nadd = MathMap.create! name: "NPlusN", js: '''
+{
+  run: function(n,m){return n + m;},
+  tmpl: function(n,m){return "" + n + " + " + m " = " (m+n);}
+  example: function(){ 
+    var n = new M.Natural(); 
+    var m = new M.Natural();
+    return M.NplusN(m,n);
+  },
+}
+'''
+nadd.objects.push nat
+nadd.save!

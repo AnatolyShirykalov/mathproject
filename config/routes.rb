@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'math_maps/index'
+
+  get 'math_maps/show'
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'

@@ -11,6 +11,7 @@ Page.create!(name: 'Галерея', fullpath: '/galleries', menu_ids: [h])
 c = Page.create!(name: 'О компании', fullpath: '/company', menu_ids: [h], content: 'О Компании')
 Page.create!(name: 'Новости', fullpath: '/news', menu_ids: [h])
 Page.create!(name: 'Контакты', fullpath: '/contacts', menu_ids: [h], content: 'Текст стр контакты')
+Page.create!(name: 'Админка', fullpath: '/admin', menu_ids: [h])
 
 MathObject.destroy_all
 MathMap.destroy_all

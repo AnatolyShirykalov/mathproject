@@ -26,6 +26,7 @@ gem 'sentry-raven'
 
 gem 'uglifier'
 
+gem 'annotate'
 # windows
 gem 'tzinfo-data' if Gem.win_platform?
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
@@ -35,7 +36,7 @@ group :development do
   gem 'better_errors', github: 'charliesome/better_errors'
   gem 'pry-rails'
   gem 'listen'
-  
+
 
   gem 'capistrano', require: false
   gem 'capistrano-bundler', require: false

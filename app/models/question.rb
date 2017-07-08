@@ -1,17 +1,16 @@
 # == Schema Information
 #
-# Table name: math_objects
+# Table name: questions
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  js         :string
+#  question   :string
+#  ans1       :string
+#  ans2       :string
+#  ans3       :string
+#  rans       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :math_object do
-    name "MyString"
-    js "MyString"
-  end
+class Question < ApplicationRecord
 end

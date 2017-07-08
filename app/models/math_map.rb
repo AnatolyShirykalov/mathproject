@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: math_maps
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  js         :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class MathMap < ApplicationRecord
   has_many :mm_ps, -> {where kind: 'mm'},
     class_name: "Dependence", as: :dependant,

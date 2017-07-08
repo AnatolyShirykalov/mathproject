@@ -369,6 +369,41 @@ ALTER SEQUENCE pages_id_seq OWNED BY pages.id;
 
 
 --
+-- Name: questions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE questions (
+    id bigint NOT NULL,
+    question character varying,
+    ans1 character varying,
+    ans2 character varying,
+    ans3 character varying,
+    rans character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: questions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE questions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: questions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE questions_id_seq OWNED BY questions.id;
+
+
+--
 -- Name: rails_admin_settings; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -639,6 +674,13 @@ ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regcl
 
 
 --
+-- Name: questions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY questions ALTER COLUMN id SET DEFAULT nextval('questions_id_seq'::regclass);
+
+
+--
 -- Name: rails_admin_settings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -751,6 +793,14 @@ ALTER TABLE ONLY news
 
 ALTER TABLE ONLY pages
     ADD CONSTRAINT pages_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: questions questions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY questions
+    ADD CONSTRAINT questions_pkey PRIMARY KEY (id);
 
 
 --
@@ -1004,6 +1054,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20170627205540'),
 ('20170627205541'),
 ('20170627205542'),
-('20170627205543');
+('20170627205543'),
+('20170703201944');
 
 

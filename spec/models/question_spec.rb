@@ -1,16 +1,19 @@
 # == Schema Information
 #
-# Table name: math_maps
+# Table name: questions
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  js         :string
+#  question   :string
+#  ans1       :string
+#  ans2       :string
+#  ans3       :string
+#  rans       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'rails_helper'
 
-RSpec.describe MathMap, type: :model do
+RSpec.describe Question, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

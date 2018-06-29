@@ -34,7 +34,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors', github: 'charliesome/better_errors'
   gem 'pry-rails'
-  gem 'listen'
+  gem 'listen', '>= 3.1.5'
   
 
   gem 'capistrano', require: false

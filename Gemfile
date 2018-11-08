@@ -5,23 +5,23 @@ gem 'pg'
 
 gem 'sass'
 
-gem 'rocket_cms_activerecord'
+gem 'rocket_cms_activerecord', '>= 0.19.4'
 gem 'rails_admin', github: 'crowdtask/rails_admin'
 
 gem 'slim'
 gem 'haml'
 
-gem 'sass-rails'
-gem 'webpack-rails'
+gem 'sass-rails', '>= 5.0.6'
+gem 'webpack-rails', '>= 0.9.10'
 
-gem 'devise'
+gem 'devise', '>= 4.3.0'
 gem 'devise-i18n'
 gem 'cancancan'
 
 gem 'cloner'
 gem 'puma'
 
-gem 'x-real-ip'
+gem 'x-real-ip', '>= 0.2.1'
 gem 'sentry-raven'
 
 gem 'uglifier'
@@ -46,11 +46,11 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.6.0'
   gem 'database_cleaner'
   gem 'email_spec'
   
   gem 'ffaker'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 4.8.0'
 end
 

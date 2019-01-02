@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'demo' => 'demo#index'
+
   get 'math_maps/index'
 
   get 'math_maps/show'

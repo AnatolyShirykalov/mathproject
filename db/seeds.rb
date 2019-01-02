@@ -6,6 +6,7 @@ Page.destroy_all
 Menu.destroy_all
 h = Menu.create(name: 'Главное', text_slug: 'main').id
 p = Page.create!(name: 'Проекты', content: 'проекты', fullpath: '/projects', menu_ids: [h])
+Page.create!(name: 'Демо', fullpath: '/demo', menu_ids: [h])
 Page.create!(name: 'Прайс лист', fullpath: '/price', menu_ids: [h])
 Page.create!(name: 'Галерея', fullpath: '/galleries', menu_ids: [h])
 c = Page.create!(name: 'О компании', fullpath: '/company', menu_ids: [h], content: 'О Компании')

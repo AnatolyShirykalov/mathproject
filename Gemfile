@@ -9,7 +9,7 @@ gem 'rocket_cms_activerecord'
 gem 'rails_admin', github: 'crowdtask/rails_admin'
 
 gem 'slim'
-gem 'slim-rails'
+gem 'slim-rails', '>= 3.1.2'
 gem 'haml'
 
 gem 'sass-rails'

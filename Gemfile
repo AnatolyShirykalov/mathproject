@@ -5,7 +5,7 @@ gem 'pg'
 
 gem 'sass'
 
-gem 'rocket_cms_activerecord'
+gem 'rocket_cms_activerecord', '>= 0.19.4'
 gem 'rails_admin', github: 'crowdtask/rails_admin'
 
 gem 'slim'
@@ -15,7 +15,7 @@ gem 'haml'
 gem 'sass-rails'
 gem 'webpack-rails'
 
-gem 'devise'
+gem 'devise', '>= 4.6.0'
 gem 'devise-i18n'
 gem 'cancancan'
 
